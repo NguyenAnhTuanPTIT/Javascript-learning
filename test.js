@@ -1,1 +1,1 @@
-I want to be a professional javascript 
+I want to be a javascript 
