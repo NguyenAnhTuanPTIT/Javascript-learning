@@ -52,3 +52,4 @@ let a = 6;
 let b = 9;
 console.log(a>3 && a<=6) // toán tử và
 console.log(a>=6 || a>9) // toán tử hoặc
+console.log(!(a>b)) // KQ ra true,toán tử phủ định
