@@ -24,6 +24,31 @@ console.log(++a); // cộng biến vào trước rồi mới thục hiện dòng
 console.log(a);
 */
 
-let a = 3;
-let b = 45;
-a += b; // tương ứng a=a+b
+// let a = 3;
+// let b = 4;
+// a **= b; // tương ứng a=a+b, áp dụng cho các toán tử -,*,/,%
+// console.log(a)
+
+// let a = 3;
+// let b = 4;
+// console.log(a<b); //trả ra kết quả là true hoặc false
+// console.log(a>b); 
+// console.log(a<=b); 
+// console.log(a>=b); 
+// console.log(a==b); //so sánh bằng 
+
+// let a = "Tuan";
+// let b = " Nguyen"
+// console.log(a+b); // cộng chuỗi
+// a+=b;
+// console.log(a);
+
+// console.log(5+"5"); // số + chuỗi -> chuỗi
+// console.log("5"+6); // chuỗi + số -> chuỗi
+// console.log("5"== 5); //KQ ra true, so sánh cùng giá trị không quan tâm kiểu dữ liệu
+// console.log("5"===5); //KQ ra false, so sánh các giá trị cùng kiểu dữ liệu 
+
+let a = 6;
+let b = 9;
+console.log(a>3 && a<=6) // toán tử và
+console.log(a>=6 || a>9) // toán tử hoặc
