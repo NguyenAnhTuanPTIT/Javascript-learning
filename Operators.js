@@ -48,8 +48,26 @@ console.log(a);
 // console.log("5"== 5); //KQ ra true, so sánh cùng giá trị không quan tâm kiểu dữ liệu
 // console.log("5"===5); //KQ ra false, so sánh các giá trị cùng kiểu dữ liệu 
 
-let a = 6;
-let b = 9;
-console.log(a>3 && a<=6) // toán tử và
-console.log(a>=6 || a>9) // toán tử hoặc
-console.log(!(a>b)) // KQ ra true,toán tử phủ định
+// let a = 6;
+// let b = 9;
+// console.log(a>3 && a<=6) // toán tử và
+// console.log(a>=6 || a>9) // toán tử hoặc
+// console.log(!(a>b)) // KQ ra true,toán tử phủ định
+
+//--------------------Toán tử 3 ngôi----------------------
+// let isMale = true;
+// let a = isMale ? "Male":"Female";
+// console.log(a)
+
+//----------- Phép gán ----------------------------------
+// a= null;
+// b= a??10; // nếu a = null sẽ gán giá trị đằng sau "??" làm giá trị cho a
+// console.log(b);
+
+// a= undefined;
+// b=a??10; // nếu a = undefined sẽ gán giá trị đằng sau "??" làm giá trị cho a
+// console.log(b);
+
+a= 11;
+b=a??10; // nếu a != undefined/null sẽ vẫn lấy giá trị đã có
+console.log(b);
