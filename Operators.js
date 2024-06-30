@@ -93,12 +93,17 @@ console.log(a);
 // console.log(-b/0); // KQ = - Infinity, âm vô cùng
 // console.log(typeof NaN); // KQ = number
 // console.log(typeof Infinity); // KQ = number
+
+// console.log(isNaN("19")) // KQ = false, hàm isNaN sẽ ép về kiểu số và mang đi so sánh có phải là NaN ko
+// console.log(isNaN("19$")) // KQ = true, do "19$" là string khi ép về kiểu số sẽ không được  
+// console.log(Number.isNaN("19")) // KQ = false, do "19" là string không phải là số 
+//-> Hàm isNaN sẽ ép tham số truyền vàovề kiểu số trước rồi mới đi so sánh, Hàm Number.isNaN sẽ không ép về kiểu số mà đi so sánh có phải là số luôn không
 //---------------------------------------------------------------------------------
 
-//-------- Khai báo object ---------------------------------------------------------------------------
-let a = new Number(10); //Khai báo kiểu object
-let b = 10;
-let c = new Number(10);
+//---------------------------------------- Khai báo object -------------------------------------------
+// let a = new Number(10); //Khai báo kiểu object
+// let b = 10;
+// let c = new Number(10);
 // console.log(a); // KQ = Number (10), in ra object
 // console.log(a/2); // KQ = 5, convert object về số và thực hiện phép chia
 // console.log(a==b); // KQ = true, so sánh object số và số nên sẽ convert object số về để so sánh với số
@@ -107,5 +112,10 @@ let c = new Number(10);
 // console.log(a==c); // KQ = false, compare 2 object sẽ cho ra false
 // console.log(a===c); // KQ = false
 //-> bản chất là do 2 giá trị này được cấp ở 2 vùng nhớ khác nhau, nên sẽ cho ra KQ sai
-console.log(typeof undefined)
-console.log(isNaN(Infinity))
+//-----------------------------------------------------------------------------------------------------
+
+
+
+
+
+
