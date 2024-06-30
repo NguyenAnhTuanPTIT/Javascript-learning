@@ -12,11 +12,11 @@ console.log(a)
 console.log(b)
 */
 
-/*
-let a = 1;
-console.log(a++); // thực hiện dòng lệnh hiện tại trước rồi sau đó mới cộng vào biến đó, tương tự cho phép trừ
-console.log(a);
-*/
+
+// let a = 1;
+// console.log(a++); // thực hiện dòng lệnh hiện tại trước rồi sau đó mới cộng vào biến đó, tương tự cho phép trừ
+// console.log(a);
+
 
 /*
 let a = 1
@@ -68,6 +68,44 @@ console.log(a);
 // b=a??10; // nếu a = undefined sẽ gán giá trị đằng sau "??" làm giá trị cho a
 // console.log(b);
 
-a= 11;
-b=a??10; // nếu a != undefined/null sẽ vẫn lấy giá trị đã có
-console.log(b);
+// a= 11;
+// b=a??10; // nếu let a = 0.2;
+// let b = 0.1;
+// console.log(a+b); // KQ = 0.300000... => trả ra kq theo dạng 64 bita != undefined/null sẽ vẫn lấy giá trị đã có
+// console.log(b);
+
+//------ Hai String chia cho nhau ------------
+// console.log("20"/"10"); // KQ = 2
+// console.log("20"*"10"); // KQ = 200
+// console.log("20"-"10"); // KQ = 10
+// console.log("20"+"10"); // KQ = 2010
+// Javascript sẽ convert ra kiểu number để thực hiện phép tính
+// Riêng đối với phép cộng sẽ ưu tiên cộng chuỗi
+//--------------------------------------------
+
+//------- Hàm xác định NaN (not a number), xác định xem phải là số không ----------
+// let b = 10;
+// console.log(Number.isNaN(b)); // KQ là false do b là một số
+
+// console.log(b/"abc"); //KQ = NaN, thực hiện một phép chia phi lý
+
+// console.log(b/0); // KQ = Infinity, bé vô cùng
+// console.log(-b/0); // KQ = - Infinity, âm vô cùng
+// console.log(typeof NaN); // KQ = number
+// console.log(typeof Infinity); // KQ = number
+//---------------------------------------------------------------------------------
+
+//-------- Khai báo object ---------------------------------------------------------------------------
+let a = new Number(10); //Khai báo kiểu object
+let b = 10;
+let c = new Number(10);
+// console.log(a); // KQ = Number (10), in ra object
+// console.log(a/2); // KQ = 5, convert object về số và thực hiện phép chia
+// console.log(a==b); // KQ = true, so sánh object số và số nên sẽ convert object số về để so sánh với số
+// console.log(a===b); //KQ= false, so sánh tuyệt đối nên object số và số sẽ sai
+
+// console.log(a==c); // KQ = false, compare 2 object sẽ cho ra false
+// console.log(a===c); // KQ = false
+//-> bản chất là do 2 giá trị này được cấp ở 2 vùng nhớ khác nhau, nên sẽ cho ra KQ sai
+console.log(typeof undefined)
+console.log(isNaN(Infinity))
