@@ -132,12 +132,24 @@ console.log(a);
 // console.log("Tuan \\") // KQ = Tuan \
 // console.log("abc"=="abc") // KQ = true
 // console.log ("abc"=="abcd") // KQ = false
-console.log("abc".length); // KQ = 3, độ dài của chuỗi
-console.log("abc".concat("def")); // KQ = abcdef, tương đương với cộng chuỗi
-console.log("abcdef".substring(1,3)); // KQ = bc, cắt theo từ index bắt đầu và index kết thúc, nhưng character ở index kết thúc sẽ không lấy
-console.log("abcdef".toUpperCase()); // KQ = ABCDEF
-console.log("AbCdEf".toLowerCase()); // KQ = abcdef
-console.log("ABCDEF".replace("C", "HHH")); // KQ = ABHHDEF
-console.log("ABCDEFC".replace("C","HH")); // KQ = ABHHDEFC, chỉ replace chữ C thứ nhất
-console.log("ABCDEFC".replaceAll("C", "HH")); // KQ = ABHHDEFHH, replace toàn bộ chữ C
+// console.log("abc".length); // KQ = 3, độ dài của chuỗi
+// console.log("abc".concat("def")); // KQ = abcdef, tương đương với cộng chuỗi
+// console.log("abcdef".substring(1,3)); // KQ = bc, cắt theo từ index bắt đầu và index kết thúc, nhưng character ở index kết thúc sẽ không lấy
+// console.log("abcdef".toUpperCase()); // KQ = ABCDEF
+// console.log("AbCdEf".toLowerCase()); // KQ = abcdef
+// console.log("ABCDEF".replace("C", "HHH")); // KQ = ABHHDEF
+// console.log("ABCDEFC".replace("C","HH")); // KQ = ABHHDEFC, chỉ replace chữ C thứ nhất
+// console.log("ABCDEFC".replaceAll("C", "HH")); // KQ = ABHHDEFHH, replace toàn bộ chữ C
+//------------------------------------------------------------------------------------------
 
+//---------------------------------------------------- Regular Expression ----------------------------------------------------
+/* Cú pháp: /pattern/flags
+- flags:
+ + g  => Tìm tất cả các chuỗi khớp với pattern
+ + i  => Không phân biệt chữ hoa thường
+ + [] => Dùng để so khớp nhiều ký tự khác nhau trong cùng một vị trí, nó sẽ khớp với bất kỳ ký tự nào nằm bên trong cặp ngoặc vuông []
+ + ^  => nếu dấu ^ nằm trong cặp ngoặc vuông [] thì nó sẽ khớp với những chuỗi không có các ký tự theo sau dấu ^
+ + -  => giả sử chúng ta muốn so khớp tất cả các chữ cái trong bảng chữ cái trong cùng một vị trí, chúng ta có thể viết tất cả các chữ cái vào dấu [], 
+   nhưng như thế sẽ rất thiếu thực tế, có một cách đơn giản hơn đó là dùng dấu - ( vd: [a-h] --- so khớp tất cả chữ cái từ a đến h, [0-9] --- so khớp các số từ 0 đến 9 )
+
+console.log("My name Tuan".replace(/T/i, "A")) // KQ = My name Auan
