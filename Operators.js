@@ -114,8 +114,30 @@ console.log(a);
 //-> bản chất là do 2 giá trị này được cấp ở 2 vùng nhớ khác nhau, nên sẽ cho ra KQ sai
 //-----------------------------------------------------------------------------------------------------
 
+//------------------------------------- Hàm làm tròn ---------------------------------------------------
+// console.log(Math.round(12.990)); //KQ = 13, làm tròn đến số nguyên gần nhất
+// console.log((12.46).toFixed(1));// KQ = 12.5, làm tròn đến số thập phân mong muốn 
+//-----------------------------------------------------------------------------------------------------
 
+//----------------------------------- Hàm so sánh ------------------------------------------------------
+// let a = new Number(10); 
+// let b = new Number(10); 
+// console.log(a.valueOf() == b.valueOf()); // KQ = true, muốn so sánh giá trị của 2 object phải dùng hàm valueOf
+//------------------------------------------------------------------------------------------------------
 
-
-
+//------------------------------------- Kiểu String ----------------------------------------------------
+// console.log("My name is \"Tuan\""); // KQ = My name is "Tuan", dùng ký tự \ khi có kí tự dấu "
+// console.log("My name is 'Tuan'"); // KQ = My name is 'Tuan', dùng dấu nháy đơn trong dấu nháy kép
+// console.log('Tuan'); // KQ = Tuan
+// console.log("Tuan \\") // KQ = Tuan \
+// console.log("abc"=="abc") // KQ = true
+// console.log ("abc"=="abcd") // KQ = false
+console.log("abc".length); // KQ = 3, độ dài của chuỗi
+console.log("abc".concat("def")); // KQ = abcdef, tương đương với cộng chuỗi
+console.log("abcdef".substring(1,3)); // KQ = bc, cắt theo từ index bắt đầu và index kết thúc, nhưng character ở index kết thúc sẽ không lấy
+console.log("abcdef".toUpperCase()); // KQ = ABCDEF
+console.log("AbCdEf".toLowerCase()); // KQ = abcdef
+console.log("ABCDEF".replace("C", "HHH")); // KQ = ABHHDEF
+console.log("ABCDEFC".replace("C","HH")); // KQ = ABHHDEFC, chỉ replace chữ C thứ nhất
+console.log("ABCDEFC".replaceAll("C", "HH")); // KQ = ABHHDEFHH, replace toàn bộ chữ C
 

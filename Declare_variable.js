@@ -41,4 +41,23 @@ console.log("Hello world")
 // objA ["name"]= "Nguyen Anh Tuan";
 // console.log(objA);
 
+//-------------------------------------- Cách xác định giá trị của biến khi có nhiều block -----------------------------------
+{
+    // let a = 2;
+    // {
+    //     let a = 5;
+    //     for(let a = 0; a < 10; a++){
+    //         let a = 3;
+    //         console.log(a); // KQ = 3, sẽ lấy giá trị của biến a trong block cuối cùng 
+    //     }
+    // }
+
+    // let h = 6;
+    // while (h<10){
+    //     let h = 9;
+    //     h++;
+    //     console.log(h);
+    // }
+}
+
 
