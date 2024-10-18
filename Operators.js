@@ -151,5 +151,6 @@ console.log(a);
  + ^  => nếu dấu ^ nằm trong cặp ngoặc vuông [] thì nó sẽ khớp với những chuỗi không có các ký tự theo sau dấu ^
  + -  => giả sử chúng ta muốn so khớp tất cả các chữ cái trong bảng chữ cái trong cùng một vị trí, chúng ta có thể viết tất cả các chữ cái vào dấu [], 
    nhưng như thế sẽ rất thiếu thực tế, có một cách đơn giản hơn đó là dùng dấu - ( vd: [a-h] --- so khớp tất cả chữ cái từ a đến h, [0-9] --- so khớp các số từ 0 đến 9 )
-
+*/
 console.log("My name Tuan".replace(/T/i, "A")) // KQ = My name Auan
+console.log("Nguyen Anh Tuan".replace(/\w/g,"D")) // KQ = DDDDDD DDD DDDD
