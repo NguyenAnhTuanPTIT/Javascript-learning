@@ -69,7 +69,9 @@ console.log(a);
 // console.log(b);
 
 // a= 11;
-// b=a??10; // nếu let a = 0.2;
+// b=a??10; 
+// nếu let a = 0.2;
+// let a = undefined;
 // let b = 0.1;
 // console.log(a+b); // KQ = 0.300000... => trả ra kq theo dạng 64 bita != undefined/null sẽ vẫn lấy giá trị đã có
 // console.log(b);
@@ -97,7 +99,7 @@ console.log(a);
 // console.log(isNaN("19")) // KQ = false, hàm isNaN sẽ ép về kiểu số và mang đi so sánh có phải là NaN ko
 // console.log(isNaN("19$")) // KQ = true, do "19$" là string khi ép về kiểu số sẽ không được  
 // console.log(Number.isNaN("19")) // KQ = false, do "19" là string không phải là số 
-//-> Hàm isNaN sẽ ép tham số truyền vàovề kiểu số trước rồi mới đi so sánh, Hàm Number.isNaN sẽ không ép về kiểu số mà đi so sánh có phải là số luôn không
+//-> Hàm isNaN sẽ ép tham số truyền vào về kiểu số trước rồi mới đi so sánh, Hàm Number.isNaN sẽ không ép về kiểu số mà đi so sánh có phải là số luôn không
 //---------------------------------------------------------------------------------
 
 //---------------------------------------- Khai báo object -------------------------------------------
@@ -140,6 +142,7 @@ console.log(a);
 // console.log("ABCDEF".replace("C", "HHH")); // KQ = ABHHDEF
 // console.log("ABCDEFC".replace("C","HH")); // KQ = ABHHDEFC, chỉ replace chữ C thứ nhất
 // console.log("ABCDEFC".replaceAll("C", "HH")); // KQ = ABHHDEFHH, replace toàn bộ chữ C
+// console.log("          ABC          ").trim(); //KQ = ABC, loại bỏ các khoảng trắng
 //------------------------------------------------------------------------------------------
 
 //---------------------------------------------------- Regular Expression ----------------------------------------------------
@@ -152,5 +155,33 @@ console.log(a);
  + -  => giả sử chúng ta muốn so khớp tất cả các chữ cái trong bảng chữ cái trong cùng một vị trí, chúng ta có thể viết tất cả các chữ cái vào dấu [], 
    nhưng như thế sẽ rất thiếu thực tế, có một cách đơn giản hơn đó là dùng dấu - ( vd: [a-h] --- so khớp tất cả chữ cái từ a đến h, [0-9] --- so khớp các số từ 0 đến 9 )
 */
-console.log("My name Tuan".replace(/T/i, "A")) // KQ = My name Auan
-console.log("Nguyen Anh Tuan".replace(/\w/g,"D")) // KQ = DDDDDD DDD DDDD
+
+// console.log("My name Tuan".replace(/T/i, "A")) // KQ = My name Auan
+// console.log("Nguyen Anh Tuan".replace(/\w/g,"D")) // KQ = DDDDDD DDD DDDD
+// Nếu replaceAll thì không cần regular expression /g
+// Nếu replace thì sẽ dùng được regular expression /g
+
+//--------------------------------------------------- OBJECTS --------------------------------------------
+let student ={ // Khai báo 1 object dạng JSON
+  name: "Tuan",
+  age: 28,
+  gender: "male",
+  passed: false,
+  1: "OOP"
+}
+console.log(student);
+
+student.address = "2 Ha Do airport building"; // thêm một property cho object student
+console.log(student);
+
+console.log(student.name); //In ra giá trị của 1 property
+
+console.log(student["1"]); //nếu trong object khai báo 1 property dạng số, thì khi muốn lấy giá trị của property đó ra phải khai báo dạng ["key"]
+console.log(student[1]); //hoặc có thể dùng cách này
+
+//console.log(student[name]); // KQ sẽ bị lỗi do trùng với tên 1 method, sửa lại như dưới
+console.log(student["name"]); 
+
+console.log(student.lesson); //KQ = Undefined, do chưa khai báo property = lesson trong object
+
+console.log(Object.keys(student)); // KQ in ra tất cả các key trong object
