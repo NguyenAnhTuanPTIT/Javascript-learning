@@ -4,7 +4,7 @@ console.log("Hello world")
 
 // let a = 5;
 // let b = 4
-// let c = a +b;
+// let c = a + b;
 // console.log(c);
 
 
@@ -19,7 +19,7 @@ console.log("Hello world")
 
 
 // let a = null;
-// console.log(a)
+// console.log(a) //=> In ra giá trị null
 
 
 
@@ -42,7 +42,7 @@ console.log("Hello world")
 // console.log(objA);
 
 //-------------------------------------- Cách xác định giá trị của biến khi có nhiều block -----------------------------------
-{
+//{
     // let a = 2;
     // {
     //     let a = 5;
@@ -52,12 +52,15 @@ console.log("Hello world")
     //     }
     // }
 
-    // let h = 6;
-    // while (h<10){
+    // let h = 9;
+    // while (h < 10){ // tại dòng lệnh này h này là h = 9 < 10 => điều kiện luôn luôn thỏa và vòng lặp sẽ ko end được
+    //     //let h = 2; // tại dòng lệnh này h này h = 2, khác với h = 9 ở trên
+    //     //console.log(h);
     //     let h = 9;
+    //     //console.log(h);
     //     h++;
     //     console.log(h);
     // }
-}
 
+//}
 
