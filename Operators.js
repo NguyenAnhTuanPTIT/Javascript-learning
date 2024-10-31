@@ -162,26 +162,68 @@ console.log(a);
 // Nếu replace thì sẽ dùng được regular expression /g
 
 //--------------------------------------------------- OBJECTS --------------------------------------------
-let student ={ // Khai báo 1 object dạng JSON
-  name: "Tuan",
-  age: 28,
-  gender: "male",
-  passed: false,
-  1: "OOP"
-}
-console.log(student);
+// let student ={ // Khai báo 1 object dạng JSON
+//   name: "Tuan",
+//   age: 28,
+//   gender: "male",
+//   passed: false,
+//   1: "OOP",
+//   getNameAndAddress: function(){ // Có thể khai báo hàm function trong object luôn
+//     return (this.name + " " + this.gender);
+//   }
+// }
 
-student.address = "2 Ha Do airport building"; // thêm một property cho object student
-console.log(student);
+//console.log(student); // In ra chuỗi json của object student
 
-console.log(student.name); //In ra giá trị của 1 property
+//student.address = "2 Ha Do airport building"; // thêm một property cho object student
+//console.log(student);
 
-console.log(student["1"]); //nếu trong object khai báo 1 property dạng số, thì khi muốn lấy giá trị của property đó ra phải khai báo dạng ["key"]
-console.log(student[1]); //hoặc có thể dùng cách này
+//console.log(student.name); //In ra giá trị của 1 property
+
+//console.log(student["1"]); //nếu trong object khai báo 1 property dạng số, thì khi muốn lấy giá trị của property đó ra phải khai báo dạng ["key"]
+//console.log(student[1]); //hoặc có thể dùng cách này
 
 //console.log(student[name]); // KQ sẽ bị lỗi do trùng với tên 1 method, sửa lại như dưới
-console.log(student["name"]); 
+//console.log(student["name"]); //TH nếu property trùng với hàm của javascript thì cho thêm dấu nháy kép vào
 
-console.log(student.lesson); //KQ = Undefined, do chưa khai báo property = lesson trong object
+//console.log(student.lesson); //KQ = Undefined, do chưa khai báo property = lesson trong object
 
-console.log(Object.keys(student)); // KQ in ra tất cả các key trong object
+//console.log(Object.keys(student)); // KQ in ra tất cả các key trong object
+
+//console.log(student.getNameAndAddress()); // In ra kết quả của hàm function getNameAndAddress
+
+//============= Trường hợp flexible trong khai báo property trong Object
+// let student ={ // Khai báo 1 object dạng JSON
+//   name: "Tuan",
+//   age: 28,
+//   gender: "male",
+//   passed: false,
+//   getNameAndAddress: function(){
+//     return (this.name + " " + this.address);
+//   }
+// }
+//console.log(student.getNameAndAddress()); // KQ = Tuan undefined do address chưa khai báo trong Object
+
+// student.address =  "187 Le Van Duyet";
+// console.log(student.getNameAndAddress()); //Mặc dù property address được thêm ở ngoài object nhưng khi gọi 1 hàm trong object đó vẫn có thể lấy ra được, chỗ này cho thấy sự linh động trong javascrip
+
+// console.log(delete student.age);  // Xóa 1 key trong object
+// console.log(student); // Key age sẽ không hiển thị trong kết quả json nữa
+
+// student.gender = "female"; //Modify value của 1 key trong object
+// console.log(student.gender); //KQ = female
+
+//  const obj = {a:1,b:3};
+//  obj = 2;
+//  console.log(obj); // KQ sẽ ra lỗi do gán vào biến constant
+
+const obj = {a:1,b:3};
+console.log(obj);
+obj.a = 10; // Nhưng có thể thay đổi giá trị của 1 property trong 1 object constant
+console.log(obj);
+
+console.log(JSON.stringify(obj)); // KQ sẽ in ra chuẩn JSON, các key sẽ nằm trong cặp dấu nháy kép.
+
+a = JSON.parse("{\"a\":3, \"b\":5}"); //Khi dùng JSON.parse thì chuỗi truyền vào phải đúng chuẩn JSON FORMAT
+console.log(a); //KQ sẽ cho ra object
+ 
