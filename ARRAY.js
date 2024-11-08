@@ -89,33 +89,34 @@ let arrNums = [1,2,3];
 // console.log(arr.sort(function(a,b){return a-b})); //Hàm sort hỗ trợ function dùng thuật toán sort tăng dần (quick sort algorithm)
 // console.log(arr.sort(function(a,b){return b-a})); //Hàm sort hỗ trợ function dùng thuật toán sort giảm dần
 
-// const students = [
-//     {
-//         Name: "JOHN",
-//         age: 28
-//     },
-//     {
-//         Name:"Catherine",
-//         age: 42
-//     },
-//     {
-//         Name: "Carter",
-//         age: 54
-//     },
-//     {
-//         Name: "ADAM",
-//         age: 32
-//     },
-//     {
-//         Name: "JackSon",
-//         age: 12
-//     }
-// ];
+const students = [
+    {
+        Name: "JOHN",
+        age: 28
+    },
+    {
+        Name:"Catherine",
+        age: 42
+    },
+    {
+        Name: "Carter",
+        age: 54
+    },
+    {
+        Name: "ADAM",
+        age: 32
+    },
+    {
+        Name: "JackSon",
+        age: 12
+    }
+];
 // console.log(students[0].age);
 // console.log(JSON.stringify(students.sort(function (a,b){return a.age - b.age}))); //Sắp xếp lại mảng theo tuổi tăng dần
 // console.log(JSON.stringify(students.sort(function (a,b){return b.age - a.age}))); //Sắp xếp lại mảng theo tuổi giảm dần
 // console.log(JSON.stringify(students.sort(function (a,b){return a.Name.localeCompare(b.Name)}))); // Sắp xếp lại mảng theo tên tăng dần
 // console.log(JSON.stringify(students.sort(function (a,b){return b.Name.localeCompare(a.Name)}))); // Sắp xếp lại mảng theo tên giảm dần
+
 
 
 
