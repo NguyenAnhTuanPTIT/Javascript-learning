@@ -89,35 +89,45 @@ let arrNums = [1,2,3];
 // console.log(arr.sort(function(a,b){return a-b})); //Hàm sort hỗ trợ function dùng thuật toán sort tăng dần (quick sort algorithm)
 // console.log(arr.sort(function(a,b){return b-a})); //Hàm sort hỗ trợ function dùng thuật toán sort giảm dần
 
-const students = [
-    {
-        Name: "JOHN",
-        age: 28
-    },
-    {
-        Name:"Catherine",
-        age: 42
-    },
-    {
-        Name: "Carter",
-        age: 54
-    },
-    {
-        Name: "ADAM",
-        age: 32
-    },
-    {
-        Name: "JackSon",
-        age: 12
-    }
-];
+// const students = [
+//     {
+//         Name: "JOHN",
+//         age: 28
+//     },
+//     {
+//         Name:"Catherine",
+//         age: 42
+//     },
+//     {
+//         Name: "Carter",
+//         age: 54
+//     },
+//     {
+//         Name: "ADAM",
+//         age: 32
+//     },
+//     {
+//         Name: "JackSon",
+//         age: 12
+//     }
+// ];
 // console.log(students[0].age);
 // console.log(JSON.stringify(students.sort(function (a,b){return a.age - b.age}))); //Sắp xếp lại mảng theo tuổi tăng dần
 // console.log(JSON.stringify(students.sort(function (a,b){return b.age - a.age}))); //Sắp xếp lại mảng theo tuổi giảm dần
 // console.log(JSON.stringify(students.sort(function (a,b){return a.Name.localeCompare(b.Name)}))); // Sắp xếp lại mảng theo tên tăng dần
 // console.log(JSON.stringify(students.sort(function (a,b){return b.Name.localeCompare(a.Name)}))); // Sắp xếp lại mảng theo tên giảm dần
 
+// console.log(new Date()); //In ra ngày và thời gian hiện tại
+// console.log(new Date().toTimeString()); //In ra chuỗi thời gian hiện tại chuẩn 
+// console.log(new Date().toUTCString()); //In ra chuỗi ngày thời gian UTC chuẩn 
 
+// console.log(new Date("10-11-2023")); //In ra kết quả ngày giờ cụ thể khi nhập theo kiểu ngày giờ bên Việt Nam
+// console.log(new Date("10/11/2023 20:30:50"));
+
+// console.log(new Date(2392323)); //2392323 được tính là milisecond, giá trị dùng để cộng sẽ bắt đầu từ 01/01/1970 0h0p0s
+// console.log(new Date(-2392323451131)); // -2392323451131 sẽ được tính lui ngày với ngày bắt đầu tính lui là 01/01/1970 0h0p0s
+// console.log(new Date(24*60*60*1000)); // 24*60*60*1000 = 1 ngày tính theo milisecond
+//Có thể dùng Chrome, tab console để thử các đoạn code trên
 
 
 
