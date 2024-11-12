@@ -82,9 +82,15 @@
 // console.log(plus_2(2,plus_1)); // KQ = 3
 
 
-function adds(a,b, ...more){ //Không xác định được bao nhiêu biến truyền vào thì dùng ...more
-    console.log(a);
-    console.log(b);
-    console.log(more);    
+// function adds(a,b, ...more){ //Không xác định được bao nhiêu biến truyền vào thì dùng ...more
+//     console.log(a);
+//     console.log(b);
+//     console.log(more);    
+// }
+// adds(1,0,6,8,9); //KQ = 1,0 và mảng chứa [6,8,9]
+
+
+function arr_Ex(){
+    console.log(arguments);    
 }
-adds(1,0,6,8,9);
+arr_Ex(1,3,5,7,9);
