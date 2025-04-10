@@ -73,7 +73,7 @@
 //     console.log("Haha");
 // }else{
 //     console.log("Hihi");
-// }//KQ = Hihi
+// }//KQ = Haha
 
 //Dùng hàm if để thực hiện phép cộng nếu hai số a,b là chữ số.
 // function add(a,b) {
@@ -112,7 +112,7 @@
 // }
 // learnSwitch(0); //KQ = 0 has been printed !!!
 // learnSwitch(1); //KQ = 1 has been printed !!!
-// learnSwitch("a"); //KQ = 1 has been printed !!!
+// learnSwitch("a"); //KQ = a has been printed !!!
 // learnSwitch("1"); //KQ = rỗng do hàm switch thực hiện so sánh tuyệt đối
 // learnSwitch({}); //KQ = rỗng do hàm switch không so sánh được kiểu object
 

@@ -42,25 +42,25 @@ console.log("Hello world")
 // console.log(objA);
 
 //-------------------------------------- Cách xác định giá trị của biến khi có nhiều block -----------------------------------
-//{
-    // let a = 2;
-    // {
-    //     let a = 5;
-    //     for(let a = 0; a < 10; a++){
-    //         let a = 3;
-    //         console.log(a); // KQ = 3, sẽ lấy giá trị của biến a trong block cuối cùng 
-    //     }
-    // }
+// {
+//     // let a = 2;
+//     // {
+//     //     let a = 5;
+//     //     for(let a = 0; a < 10; a++){
+//     //         let a = 3;
+//     //         console.log(a); // KQ = 3, sẽ lấy giá trị của biến a trong block cuối cùng 
+//     //     }
+//     // }
 
-    // let h = 9;
-    // while (h < 10){ // tại dòng lệnh này h này là h = 9 < 10 => điều kiện luôn luôn thỏa và vòng lặp sẽ ko end được
-    //     //let h = 2; // tại dòng lệnh này h này h = 2, khác với h = 9 ở trên
-    //     //console.log(h);
-    //     let h = 9;
-    //     //console.log(h);
-    //     h++;
-    //     console.log(h);
-    // }
+//      let h = 9;
+//      while (h < 10){ // tại dòng lệnh này h này là h = 9 < 10 => điều kiện luôn luôn thỏa và vòng lặp sẽ ko end được
+//     //     //let h = 2; // tại dòng lệnh này h này h = 2, khác với h = 9 ở trên
+//     //     //console.log(h);
+//          let h = 9;
+//          //console.log(h);
+//          h++;
+//          console.log(h);
+//      }
 
-//}
+// }
 

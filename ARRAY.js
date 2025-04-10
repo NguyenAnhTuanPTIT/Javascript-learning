@@ -1,7 +1,7 @@
 //let arr = ["A", "B", "C"]; //khai báo array
 //console.log(arr);
 
-let arrNums = [1,2,3];
+// let arrNums = [1,2,3];
 // console.log(arrNums);
 // console.log(arrNums[0]); // lấy phần tử đầu tiên trong mảng
 // console.log(arrNums[arrNums.length-1]); //Lấy phần tử cuối trong mảng
@@ -16,7 +16,7 @@ let arrNums = [1,2,3];
 // console.log(arrA); //KQ = (3) ['bbb', 'OOO', 'PPP']
 
 // const arrB = new Array(1,2,3);
-// console.log(arrB);
+// console.log(arrB); // KQ = (3) [1, 2, 3]
 // const arrC = new Array(2); //Nếu khai báo chỉ có 1 đối số như thế này thì sẽ tạo ra một mảng với 2 phần tử có giá trị undefined
 // console.log(arrC); //KQ = (2) […]
 // console.log(arrC.length); //KQ = 2, đây là kích thước của mảng  
@@ -67,13 +67,13 @@ let arrNums = [1,2,3];
 
 
 // const arr = ["o", "P", "I", "PO", "GGG", "mmm"];
-// console.log(arr.slice(2,5)); //KQ = (1) ['o'] , cắt từ vị trí số 2 đến vị trí số 5, không bao gồm phần tử thứ 5
+// console.log(arr.slice(2,5)); //KQ = (3) ["I", "PO", "GGG"] , cắt từ vị trí số 2 đến vị trí số 5, không bao gồm phần tử thứ 5
 // console.log(arr); //KQ = (3) ['I', 'PO', 'GGG'], mảng gốc vẫn được giữ nguyên
 
 // const arr = ["o", "P", "I", "PO", "GGG", "mmm"];
-// console.log(arr.join("-")); //KQ = , kết hợp các ký tự lại với nhau bằng dấu "-"
-// console.log(arr.join()); //KQ = o,P,I,PO,GGG,mmm, default là dấu phẩy
-// console.log(arr.join("")); //KQ = oPIPOGGGmmm, các kí tự dính liền nhau
+// console.log(arr.join("-")); //KQ = o-P-I-PO-GGG-mmm (kết hợp các ký tự lại với nhau bằng dấu "-")
+// console.log(arr.join()); //KQ = o,P,I,PO,GGG,mmm (default là dấu phẩy)
+// console.log(arr.join("")); //KQ = oPIPOGGGmm (các kí tự dính liền nhau)
 
 // const arr = ["o", "P", "I", "PO", "GGG", "mmm"];
 // delete arr[1]; //Xóa value của phần tử đó, vẫn giữ nguyên kích thước của mảng
@@ -89,28 +89,29 @@ let arrNums = [1,2,3];
 // console.log(arr.sort(function(a,b){return a-b})); //Hàm sort hỗ trợ function dùng thuật toán sort tăng dần (quick sort algorithm)
 // console.log(arr.sort(function(a,b){return b-a})); //Hàm sort hỗ trợ function dùng thuật toán sort giảm dần
 
-// const students = [
-//     {
-//         Name: "JOHN",
-//         age: 28
-//     },
-//     {
-//         Name:"Catherine",
-//         age: 42
-//     },
-//     {
-//         Name: "Carter",
-//         age: 54
-//     },
-//     {
-//         Name: "ADAM",
-//         age: 32
-//     },
-//     {
-//         Name: "JackSon",
-//         age: 12
-//     }
-// ];
+const students = [
+    {
+        Name: "JOHN",
+        age: 28
+    },
+    {
+        Name:"Catherine",
+        age: 42
+    },
+    {
+        Name: "Carter",
+        age: 54
+    },
+    {
+        Name: "ADAM",
+        age: 32
+    },
+    {
+        Name: "JackSon",
+        age: 12
+    }
+];
+
 // console.log(students[0].age);
 // console.log(JSON.stringify(students.sort(function (a,b){return a.age - b.age}))); //Sắp xếp lại mảng theo tuổi tăng dần
 // console.log(JSON.stringify(students.sort(function (a,b){return b.age - a.age}))); //Sắp xếp lại mảng theo tuổi giảm dần
@@ -127,7 +128,7 @@ let arrNums = [1,2,3];
 // console.log(new Date(2392323)); //2392323 được tính là milisecond, giá trị dùng để cộng sẽ bắt đầu từ 01/01/1970 0h0p0s
 // console.log(new Date(-2392323451131)); // -2392323451131 sẽ được tính lui ngày với ngày bắt đầu tính lui là 01/01/1970 0h0p0s
 // console.log(new Date(24*60*60*1000)); // 24*60*60*1000 = 1 ngày tính theo milisecond
-//Có thể dùng Chrome, tab console để thử các đoạn code trên
+// Có thể dùng Chrome, tab console để thử các đoạn code trên
 
 
 

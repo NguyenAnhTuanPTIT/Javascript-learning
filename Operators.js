@@ -127,6 +127,7 @@ console.log(a);
 // console.log(a.valueOf() == b.valueOf()); // KQ = true, muốn so sánh giá trị của 2 object phải dùng hàm valueOf
 //------------------------------------------------------------------------------------------------------
 
+
 //------------------------------------- Kiểu String ----------------------------------------------------
 // console.log("My name is \"Tuan\""); // KQ = My name is "Tuan", dùng ký tự \ khi có kí tự dấu "
 // console.log("My name is 'Tuan'"); // KQ = My name is 'Tuan', dùng dấu nháy đơn trong dấu nháy kép
@@ -148,16 +149,20 @@ console.log(a);
 //---------------------------------------------------- Regular Expression ----------------------------------------------------
 /* Cú pháp: /pattern/flags
 - flags:
+ + \w => Tìm bất kỳ ký tự chữ hoặc số (a-z, A-Z, 0-9,_)
+ + \d => Tìm bất kỳ chữ số nào (0-9)  
  + g  => Tìm tất cả các chuỗi khớp với pattern
  + i  => Không phân biệt chữ hoa thường
  + [] => Dùng để so khớp nhiều ký tự khác nhau trong cùng một vị trí, nó sẽ khớp với bất kỳ ký tự nào nằm bên trong cặp ngoặc vuông []
- + ^  => nếu dấu ^ nằm trong cặp ngoặc vuông [] thì nó sẽ khớp với những chuỗi không có các ký tự theo sau dấu ^
+ + ^  => Tìm chuỗi bắt đầu sau ^
+      => nếu dấu ^ nằm trong cặp ngoặc vuông [] thì nó sẽ khớp với những chuỗi không có các ký tự theo sau dấu ^
  + -  => giả sử chúng ta muốn so khớp tất cả các chữ cái trong bảng chữ cái trong cùng một vị trí, chúng ta có thể viết tất cả các chữ cái vào dấu [], 
    nhưng như thế sẽ rất thiếu thực tế, có một cách đơn giản hơn đó là dùng dấu - ( vd: [a-h] --- so khớp tất cả chữ cái từ a đến h, [0-9] --- so khớp các số từ 0 đến 9 )
 */
 
 // console.log("My name Tuan".replace(/T/i, "A")) // KQ = My name Auan
 // console.log("Nguyen Anh Tuan".replace(/\w/g,"D")) // KQ = DDDDDD DDD DDDD
+// console.log("Nguyen Anh Tuan".replace(/^Nguyen/,"Tran")); //KQ = Tran Anh Tuan
 // Nếu replaceAll thì không cần regular expression /g
 // Nếu replace thì sẽ dùng được regular expression /g
 
@@ -175,13 +180,13 @@ console.log(a);
 
 //console.log(student); // In ra chuỗi json của object student
 
-//student.address = "2 Ha Do airport building"; // thêm một property cho object student
-//console.log(student);
+// student.address = "2 Ha Do airport building"; // thêm một property cho object student
+// console.log(student);
 
 //console.log(student.name); //In ra giá trị của 1 property
 
-//console.log(student["1"]); //nếu trong object khai báo 1 property dạng số, thì khi muốn lấy giá trị của property đó ra phải khai báo dạng ["key"]
-//console.log(student[1]); //hoặc có thể dùng cách này
+// console.log(student["1"]); //nếu trong object khai báo 1 property dạng số, thì khi muốn lấy giá trị của property đó ra phải khai báo dạng ["key"]
+// console.log(student[1]); //hoặc có thể dùng cách này
 
 //console.log(student[name]); // KQ sẽ bị lỗi do trùng với tên 1 method, sửa lại như dưới
 //console.log(student["name"]); //TH nếu property trùng với hàm của javascript thì cho thêm dấu nháy kép vào
@@ -202,10 +207,10 @@ console.log(a);
 //     return (this.name + " " + this.address);
 //   }
 // }
-//console.log(student.getNameAndAddress()); // KQ = Tuan undefined do address chưa khai báo trong Object
+// console.log(student.getNameAndAddress()); // KQ = Tuan undefined do address chưa khai báo trong Object
 
 // student.address =  "187 Le Van Duyet";
-// console.log(student.getNameAndAddress()); //Mặc dù property address được thêm ở ngoài object nhưng khi gọi 1 hàm trong object đó vẫn có thể lấy ra được, chỗ này cho thấy sự linh động trong javascrip
+// console.log(student.getNameAndAddress()); //Mặc dù property address được thêm ở ngoài object nhưng khi gọi 1 hàm trong object đó vẫn có thể lấy ra được, chỗ này cho thấy sự linh động trong javascript
 
 // console.log(delete student.age);  // Xóa 1 key trong object
 // console.log(student); // Key age sẽ không hiển thị trong kết quả json nữa
@@ -217,13 +222,13 @@ console.log(a);
 //  obj = 2;
 //  console.log(obj); // KQ sẽ ra lỗi do gán vào biến constant
 
-const obj = {a:1,b:3};
-console.log(obj);
-obj.a = 10; // Nhưng có thể thay đổi giá trị của 1 property trong 1 object constant
-console.log(obj);
+// const obj = {a:1,b:3};
+// console.log(obj);
+// obj.a = 10; // Nhưng có thể thay đổi giá trị của 1 property trong 1 object constant
+// console.log(obj);
 
-console.log(JSON.stringify(obj)); // KQ sẽ in ra chuẩn JSON, các key sẽ nằm trong cặp dấu nháy kép.
+// console.log(JSON.stringify(obj)); // KQ sẽ in ra chuẩn JSON, các key sẽ nằm trong cặp dấu nháy kép.
 
-a = JSON.parse("{\"a\":3, \"b\":5}"); //Khi dùng JSON.parse thì chuỗi truyền vào phải đúng chuẩn JSON FORMAT
-console.log(a); //KQ sẽ cho ra object
+// a = JSON.parse("{\"a\":3, \"b\":5}"); //Khi dùng JSON.parse thì chuỗi truyền vào phải đúng chuẩn JSON FORMAT
+// console.log(a); //KQ sẽ cho ra object
  
